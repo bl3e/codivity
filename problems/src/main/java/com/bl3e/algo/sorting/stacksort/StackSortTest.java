@@ -8,7 +8,60 @@ import org.junit.Test;
 public class StackSortTest {
 
     @Test
-   public void reverse(){
+    public void sortAscending(){
+        BasicStack<Integer> stack=new BasicStack<Integer>();
+        stack.push(8);
+        stack.push(6);
+        stack.push(9);
+        stack.push(14);
+        stack.push(25);
+        System.out.println(stack);
+        StackSort.sort(stack, StackSort.SortOrder.ASCENDING);
+        System.out.println(stack);
+    }
+
+    @Test
+    public void sortDescending(){
+        BasicStack<Integer> stack=new BasicStack<Integer>();
+        stack.push(8);
+        stack.push(6);
+        stack.push(9);
+        stack.push(14);
+        stack.push(25);
+        System.out.println(stack);
+        StackSort.sort(stack, StackSort.SortOrder.DECENDING);
+        System.out.println(stack);
+    }
+
+
+    @Test
+    public void sort2Ascending(){
+        BasicStack<Integer> stack=new BasicStack<Integer>();
+        stack.push(80);
+        stack.push(55);
+        stack.push(90);
+        stack.push(14);
+        stack.push(25);
+        System.out.println(stack);
+        StackSort.sort(stack, StackSort.SortOrder.ASCENDING);
+        System.out.println(stack);
+    }
+
+    @Test
+    public void sort2Descending(){
+        BasicStack<Integer> stack=new BasicStack<Integer>();
+        stack.push(80);
+        stack.push(55);
+        stack.push(90);
+        stack.push(14);
+        stack.push(25);
+        System.out.println(stack);
+        StackSort.sort(stack, StackSort.SortOrder.DECENDING);
+        System.out.println(stack);
+    }
+
+    @Test
+   public void recursiveRebuildStack(){
         BasicStack<Integer> stack=new BasicStack<Integer>();
         stack.push(1);
         stack.push(2);
@@ -16,7 +69,7 @@ public class StackSortTest {
         stack.push(4);
         stack.push(5);
         System.out.println(stack.top());
-        StackSort.reverse(stack);
+        StackSort.recursiveRebuildStack(stack);
         System.out.println(stack.top());
     }
 }
