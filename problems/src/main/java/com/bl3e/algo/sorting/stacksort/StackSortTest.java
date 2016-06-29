@@ -33,7 +33,19 @@ public class StackSortTest {
         System.out.println(stack);
     }
 
-
+@Test
+public void test(){
+    int a='0';
+    int i='1';
+    int j='2';
+    int k='3';
+    int m='9';
+    System.out.println(a);
+    System.out.println(i);
+    System.out.println(j);
+    System.out.println(k);
+    System.out.println(m);
+}
     @Test
     public void sort2Ascending(){
         BasicStack<Integer> stack=new BasicStack<Integer>();

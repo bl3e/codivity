@@ -51,7 +51,7 @@ public class StackSort {
         }
     }
 
-    static boolean isPushed = false;
+    static boolean isPushed = false;  //Not good but required to share information across recursive call stacks ,if elem is already pushed
 
     static <T extends Comparable> void pushAtSortedPosition(BasicStack<T> stack, T element,final SortOrder sortOrder) {
         if (stack.is_empty())
@@ -71,7 +71,7 @@ public class StackSort {
                 isPushed = true;
             }
         }
-
+        System.out.println(stack);
     }
 
     public static <T> void recursiveRebuildStack(BasicStack<T> basicStack) {
